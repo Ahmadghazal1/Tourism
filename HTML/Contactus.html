@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/4076f34677.js" crossorigin="anonymous"></script>
+    <link href="../CSS/Contact.css" rel="stylesheet" />
+    <!--Test-->
+    <script src="https://cdn.jsdelivr.net/gh/ohno/popup.js@1.0.1/popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ohno/popup.js@1.0.1/popup.min.css">
+
+    <!---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand logo" href="#">
+                    Arabella
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="touristicplaces.html">Places</a>
+                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link " href="Login.html" id="login">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 style="text-align:center">Contact Us</h2>
+            <form>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">First Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Last Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="exampleFormControlInput1">Phone</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="+962 777 55 96 34">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Your Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <button class="btn btn-primary" onClick='Valid()' id="but">Send Message</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h5></h5>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <p>
+                        © 2022 - all rights reserved.
+                        Powered By Tahaluf Al Emarat
+                    </p>
+
+                </div>
+                <div class="col-sm">
+                    <h5>Head Office</h5>
+                    <p>
+                        3rd, 5th and 6th Floor
+
+
+
+
+                    </p>
+                    <p>         Al Bustan Offices Tower</p>
+                    <p> Rabdan St, Al Aman</p>
+                    <p>            P.O. Box:39892</p>
+                    <p>    United Arab Emirates, Abu Dhabi</p>
+                </div>
+                <div class="col-sm">
+                    <h5>Contact us</h5>
+                    <p>          <a href="tel:6031112298">+962 777559634</a></p>
+                    <p><a href="mailto: abc@example.com">Arableal@company.com</a></p>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script>
+        let i = 0;
+        function Valid() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your Message has been send sucessfuly',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            i++;
+
+            if (i == 1) {
+                let element = document.getElementById('but');
+                element.setAttribute('disabled', '');
+            }
+        }
+    </script>
+    <script src="../JavaSctipt/Home.js"></script>
+
+</body>
+</html>

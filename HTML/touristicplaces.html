@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="../CSS/places.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand logo" href="#">
+                    Arabella
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="touristicplaces.html">Places</a>
+                        <a class="nav-link" href="Contactus.html">Contact Us</a>
+                        <a class="nav-link" href="Login.html" id="login">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <!--Body-->
+    <main>
+        <div class="container">
+            <h2 id="head">Discover your trip and the most beautiful places to spend your vacation</h2>
+
+            <div class="row" id="places">
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../Images/shallow-focus-shot-arabian-male-traveling-horse-desert.jpg" class="myImage card-img-top" alt="..." onclick="changeImage(this)">
+                        <div class="card-body">
+                            <h5 class="card-title" onmouseover="Over(this)" onmouseout="Out(this)">Wadi Rum</h5>
+                            <p class="card-text" onclick="changeText(),changeText1()" id="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                            <a href="Wadirum.html" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../Images/bird-s-eye-view-shore-break.jpg" class="myImage card-img-top" alt="..." onclick="changeImage(this)">
+                        <div class="card-body">
+                            <h5 class="card-title" onmouseover="Over(this)" onmouseout="Out(this)">Dead sea</h5>
+                            <p class="card-text" id="text2" onclick="changeText(), changeText2() ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                            <p class="card-text" id="text_secound" onclick="changeText(), changeText2()" hidden>dsfasjdgljdflgkfjdlkgjlkdfjglkdfjklgjdfkl</p>
+
+                            <a href="deadsea.html" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../Images/wide-angle-shot-temple-hercules-jordan-blue-sky.jpg" class="myImage card-img-top" alt="..." onclick="changeImage(this)">
+                        <div class="card-body">
+                            <h5 class="card-title" onmouseover="Over(this)" onmouseout="Out(this)">Irbid</h5>
+                            <p class="card-text" onclick="changeText(), changeText3()" id="text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                            <a href="Irbid.html" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--JavaScript-->
+        <script>
+            function Over(element) {
+
+                element.style.fontSize = "3.25rem";
+
+            }
+
+            function Out(element) {
+                element.style.fontSize = "1.25rem";
+            }
+            var image = document.getElementsByClassName("myImage");
+
+
+            function changeImage(element) {
+                element.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-lT6TcSB0vQ1r4MdN9NUcMtLT2jfKsnyzrnlAkCv-okumI80jMY9n-mNvEsGm4YF2Yk&usqp=CAU';
+
+            }
+            function changeText() {
+                let audio = new Audio('../audio.mp3');
+                audio.play();
+            }
+
+            function changeText1() {
+                let element1 = document.getElementById("text1");
+                element1.innerHTML = "Wadi Rum has been inhabited by many human cultures since prehistoric times, with many cultures–including the Nabataeans–leaving their mark in the form of petroglyphs, inscriptions, and temple. In the West, Wadi Rum may be best known for its connection with British officer T. E. Lawrence";
+            }
+            function changeText2() {
+                let element2 = document.getElementById("text2");
+                element2.innerHTML = "The Dead Sea is an endorheic lake located in the Jordan Rift Valley, a geographic feature formed by the Dead Sea Transform (DST). This left lateral-moving transform fault lies along the tectonic plate boundary between the African Plate and the Arabian Plate. It runs between the East Anatolian Fault zone in Turkey and the northern end of the Red Sea Rift offshore of the southern tip of Sinai";
+
+            }
+
+            function changeText3() {
+                let element3 = document.getElementById("text3");
+                element3.innerHTML = "Irbid is the second largest metropolitan in Jordan by population after Amman. But as a city Irbid is the third largest one after Amman and Zarqa. The province of Irbid Governorate has the second largest population, and the highest population density in the kingdom.";
+
+            }
+
+
+        </script>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h5></h5>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <p>
+                        © 2022 - all rights reserved.
+                        Powered By Tahaluf Al Emarat
+                    </p>
+
+                </div>
+                <div class="col-sm">
+                    <h5>Head Office</h5>
+                    <p>
+                        3rd, 5th and 6th Floor
+
+
+
+
+                    </p>
+                    <p>         Al Bustan Offices Tower</p>
+                    <p> Rabdan St, Al Aman</p>
+                    <p>            P.O. Box:39892</p>
+                    <p>    United Arab Emirates, Abu Dhabi</p>
+                </div>
+                <div class="col-sm">
+                    <h5>Contact us</h5>
+                    <p>          <a href="tel:6031112298">+962 777559634</a></p>
+                    <p><a href="mailto: abc@example.com">Arableal@company.com</a></p>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../JavaSctipt/Home.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    color: #222222;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+#part {
+   padding-top:20px;
+}
+
+.fot {
+    background-color:red;
+
+}
+
+
+.jumbotron {
+    background-color: #B7C4CF;
+}
+
+#head {
+    color: var(--main-color);
+    font-size: 30px;
+    width: 418px; /* You Can Use 28ch */
+    margin: 30px auto;
+    border-right: 2px solid var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: control-width 3s steps(28) 2s both, blink 0.5s infinite;
+}
+
+@keyframes control-width {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 1000px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: var(--main-color);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
